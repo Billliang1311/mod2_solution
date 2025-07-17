@@ -2,20 +2,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 1%
-  }
+}
 
- h1 {
+h1 {
     font-size: 2em;
     text-align: center;
     margin-bottom: 30px;
-  }
+}
 
- .container {
+.container {
     width: 100%;
     overflow: hidden;
-  }
+}
 
- .section {
+.section {
     float: left;
     width: 30%;
     border: 1px solid black;
@@ -24,9 +24,9 @@ body {
     margin-inline-end: 1%;
     padding: 40px 20px 20px 20px;
     position: relative;
-  }
+}
 
- .section-title {
+.section-title {
     position: absolute;
     top: 0;
     right: 0;
@@ -34,25 +34,25 @@ body {
     border: 1px solid black;
     padding: 5px 10px;
     font-size: 1.25em;
-  }
+}
 
-    /* Tablet view: less than 767 */
-    @media (max-width: 767px) {
-        .section {
-          width: 100%;
-        }
-      }
+/* Tablet view: less than 767 */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
       
-      /* Tablet view: 768px - 991px */
-      @media (min-width: 768px) and (max-width: 991px) {
-        .section {
-          width: 40%;
-        }
-      }
+/* Phone view: 768px - 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 40%;
+    }
+}
       
-      /* Desktop view: 992px and above */
-      @media (min-width: 992px) {
-        .section {
-          width: 28%
-        }
-      }
+/* Desktop view: 992px and above */
+@media (min-width: 992px) {
+    .section {
+        width: 28%
+    }
+}
