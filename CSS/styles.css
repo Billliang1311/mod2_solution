@@ -48,6 +48,9 @@ h1 {
   .section {
     width: 40%;
   }
+    .sushi {
+        width: 100%
+    }
 }
       
 /* Desktop view: 992px and above */
