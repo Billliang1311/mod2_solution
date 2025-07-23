@@ -24,17 +24,29 @@ h1 {
   margin-inline-end: 1%;
   padding: 40px 20px 20px 20px;
   position: relative;
-}
 
-.section-title {
+  .section-title {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #ffcc00;
   border: 1px solid black;
   padding: 5px 10px;
   font-size: 1.25em;
+  }
+
+  &.chicken .section-title {
+    background-color: chocolate;
+  }
+
+  &.beef .section-title {
+    background-color: brown;
+  }
+
+  &.sushi .section-title {
+    background-color:blanchedalmond;
+  }
 }
+
 
 /* Tablet view: less than 767 */
 @media (max-width: 767px) {
@@ -48,9 +60,9 @@ h1 {
   .section {
     width: 40%;
   }
-    .sushi {
-        width: 86%;
-    }
+  .sushi {
+    width: 86%
+  }
 }
       
 /* Desktop view: 992px and above */
