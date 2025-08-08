@@ -1,74 +1,81 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 1%
-  }
+    margin:0;
+}
 
-h1 {
-    font-size: 2em;
+.Head-title{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.75em;
+    text-align:center;
+    margin-bottom: 20px;
+    padding: 30px 30px 40px;
+}
+
+.section{
+    box-sizing:border-box;
+    float: left;
+    border: 1px solid black;
+    padding: 30px 20px 5px;
+    position:relative;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+
+.section-title{
+    font-size: 1.25em;
+    position: absolute;
+    border:1px solid black;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    width: 100px;
     text-align: center;
-    margin-bottom: 30px;
-  }
-
-.container {
-  width: 100%;
-  overflow: hidden;
- }
-
-.section {
-  float: left;
-  width: 30%;
-  border: 1px solid black;
-  background-color: #f2f2f2;
-  margin-bottom: 20px;
-  margin-inline-end: 1%;
-  padding: 40px 20px 20px 20px;
-  position: relative;
-
-  .section-title {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 1px solid black;
-  padding: 5px 10px;
-  font-size: 1.25em;
-  }
-
-  &.chicken .section-title {
-    background-color: chocolate;
-  }
-
-  &.beef .section-title {
-    background-color: brown;
-  }
-
-  &.sushi .section-title {
-    background-color:blanchedalmond;
-  }
+    font-weight: bold;
 }
 
+.section.Chicken .section-title{
+    background-color:rgb(195, 160, 160);
+}
 
-/* Tablet view: less than 767 */
-@media (max-width: 767px) {
-  .section {
-    width: 92%;
-  }
+.section.Beef .section-title{
+    background-color:rgb(199, 104, 104);
+    color:white;
 }
-      
-/* Tablet view: 768px - 991px */
-@media (min-width: 768px) and (max-width: 991px) {
-  .section {
-    width: 40%;
-  }
-  .sushi {
-    width: 86%
-  }
+
+.section.Sushi .section-title{
+    background-color:rgb(219, 210, 166);
 }
-      
-/* Desktop view: 992px and above */
-@media (min-width: 992px) {
-  .section {
-    width: 28%
-  }
- }
-      
+
+@media(min-width:992px){
+    .section{
+        width:calc((100% - 80px) / 3);
+    }
+    .section.Chicken{
+        margin-left: 20px;
+    }
+    .section.Sushi{
+        margin-right: 20px;
+    }
+}
+
+@media(min-width:768px) and (max-width:991px){
+    .section{
+        width:calc((100% - 60px) / 2);
+    }
+    .section.Chicken{
+        margin-inline: 20px 10px;
+    }
+    .section.Beef{
+        margin-inline: 10px 20px;
+    }
+    .section.Sushi{
+        margin-inline: 20px;
+        width: calc(100% - 40px);
+    }
+}
+
+@media(max-width:767px){
+    .section{
+        margin-inline: 40px;
+        width: calc(100% - 80px);
+    }
+}
